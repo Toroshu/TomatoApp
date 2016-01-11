@@ -1,7 +1,7 @@
 # TomatoApp
 Tomato Safety is an android app which can help you in protecting your smartphone from being stolen.
 
-# Features
+### Features
 It provides three tier of security to your phone:
 
 1. sim change notifications
@@ -12,8 +12,11 @@ It provides three tier of security to your phone:
 
 
 
-## License
+
+### License
 
 "THE BEER-WARE LICENSE" (Revision 42):
+
 You can do whatever you want with this stuff. 
+
 If we meet some day, and you think this stuff is worth it, you can buy me a beer in return.
