@@ -1,0 +1,20 @@
+<resources>
+    <color name="sbt_n">#DDDDDD</color>
+    <color name="sbt_p">#379829</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="bg_gradient_start">#31244e</color>
+    <color name="bg_gradient_end">#6b394c</color>
+
+    <color name="material_blue_500">#2196F3</color>
+
+    <color name="material_blue_700">#1976D2</color>
+
+    <color name="material_green_A200">#009688</color>
+    <color name="ok">#48CFA9</color>
+
+    <color name="monster_red">#c1272d</color>
+
+
+</resources>

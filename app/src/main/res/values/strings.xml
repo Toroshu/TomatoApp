@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tomato Safety</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register_sp">RegisterSPActivity</string>
+    <string name="title_activity_status">Protection Status</string>
+    <string name="title_activity_recover_password">RecoverPasswordActivity</string>
+
+    <string name="msg_guess_number">Guess the number</string>
+    <string name="txt_proceed">Guess the number</string>
+    <string name="msg_sms_declaration">*Your password will be sent to the \'super-hero\' number via SMS. Standard SMS charges may apply.</string>
+    <string name="txt_first_number">First number</string>
+    <string name="txt_second_number">Second number</string>
+    <string name="txt_t_n_c">I have read the terms and conditions.</string>
+    <string name="txt_create_Account">Create my account</string>
+    <string name="txt_ur_name">Your Name</string>
+    <string name="txt_pwd">Password\t</string>
+    <string name="txt_signin">SIGN IN</string>
+    <string name="txt_fyp">I FORGOT MY PASSWORD</string>
+    <string name="tnc_details">
+        By clicking on \"Create My account\" you are accepting the following terms and conditions:\n\n\n
+1.	this software \"Tomato Safety\" comes with no warranty.\n\n
+2.	do not try to manually recover your phone in case it is stolen, go to the local police with the intruder\'s details.\n\n
+3.	there is no guarantee of your phone\’s retrieval in case it is stolen.\n\n
+4.	SMS charges may apply by the misuse of app.\n\n
+5.	this software is under development: there might be some bugs in it.\n\n
+6.	any damage to your device(smartphone) is not our responsibility.\n\n
+
+    </string>
+    <string name="title_activity_terms_and_conditions">TermsAndConditions</string>
+
+    <string name="txt_hn_query">What\'s this?</string>
+    <string name="txt_hn_details">What\'s this?</string>
+    <string name="txt_pin">What\'s my siren whistle blower PIN ?</string>
+    <string name="title_activity_send_sms">SendSMS</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="txt_faq">FAQ</string>
+    <string name="txt_aboutUs">About us</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ac">Create an account</string>
+    <string name="title_activity_credits">CreditsActivity</string>
+    <string name="title_activity_shake">Shake</string>
+</resources>

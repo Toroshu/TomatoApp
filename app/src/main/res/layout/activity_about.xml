@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_black_1000">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:onClick="playStore"
+        android:src="@drawable/toroshu_logo" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="125dp"
+        android:layout_height="25dp"
+
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/toroshu_text" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="\nToroshu Inc. is a tech startup started by three friends who have a strong urge to do things in a different way.\n
+\n\nAt Toroshu Inc. we believe in using the technology to bring about changes.\n\n
+We move around, observe and continuously thrive upon the solutions. We write programs, build prototypes, do brain storming, cook ideas in our Engineering Kitchen.
+\n\n
+You can reach to us at: teamtoroshu@gmail.com"
+
+            android:textColor="#fff" />
+
+    </ScrollView>
+
+</RelativeLayout>
