@@ -2,7 +2,6 @@ package toroshu.tomato.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
@@ -15,8 +14,6 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.gc.materialdesign.views.ButtonRectangle;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
@@ -26,12 +23,11 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
-import toroshu.tomato.core.Constants;
 import toroshu.tomato.R;
 import toroshu.tomato.core.Phone;
 
 
-public class StatusActivity extends AppCompatActivity {
+public class Status extends AppCompatActivity {
 
 
     Phone myPhone;
@@ -55,9 +51,9 @@ public class StatusActivity extends AppCompatActivity {
 
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        // AdView mAdView = (AdView) findViewById(R.id.adView);
+        //AdRequest adRequest = new AdRequest.Builder().build();
+        // mAdView.loadAd(adRequest);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -142,7 +138,7 @@ public class StatusActivity extends AppCompatActivity {
                 .build();
 
         result = new DrawerBuilder()
-                .withActivity(StatusActivity.this)
+                .withActivity(Status.this)
                 .withToolbar(toolbar).withSelectedItem(-1)
                 .withActionBarDrawerToggle(true).withAccountHeader(headerResult)
                 .addDrawerItems(new PrimaryDrawerItem().withName("Siren Whistle PIN").withIcon(R.drawable.ic_grade_black_24dp),

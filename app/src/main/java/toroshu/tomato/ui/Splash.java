@@ -7,10 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 
 import toroshu.tomato.R;
+import toroshu.tomato.core.Constants;
 
 
 public class Splash extends AppCompatActivity {
@@ -36,11 +37,15 @@ public class Splash extends AppCompatActivity {
             }
         }).start();
 
+        checkGooglePlayServicesAvailablility();
+
+
     }
 
     public void navigate(View v) {
         //YoYo.with(Techniques.Bounce).duration(500).playOn(logo);
         startActivity(new Intent(getBaseContext(), Login.class));
+        //startActivity(new Intent(getBaseContext(), FeatureX.class));
 
     }
 
@@ -51,6 +56,18 @@ public class Splash extends AppCompatActivity {
 
     }
 
+
+    private void checkGooglePlayServicesAvailablility() {
+        GoogleApiAvailability googleAPI = GoogleApiAvailability.getInstance();
+        int result = googleAPI.isGooglePlayServicesAvailable(this);
+        if (result != ConnectionResult.SUCCESS) {
+            if (googleAPI.isUserResolvableError(result)) {
+                googleAPI.getErrorDialog(this, result,
+                        Constants.PLAY_SERVICES_RESOLUTION_REQUEST).show();
+            }
+
+        }
+    }
 
 }
 

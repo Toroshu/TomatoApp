@@ -3,10 +3,7 @@ package toroshu.tomato.ninja;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,7 +15,6 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 
-import toroshu.tomato.core.Constants;
 import toroshu.tomato.core.Phone;
 
 /*
@@ -31,10 +27,11 @@ public class TrackLocation extends BroadcastReceiver
 
     GoogleApiClient mGoogleApiClient;
     Phone myPhone;
+    Context mContext;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
+        mContext = context.getApplicationContext();
         final Bundle bundle = intent.getExtras();
         myPhone = new Phone(context);
         //Toast.makeText(context, "SMS received", Toast.LENGTH_LONG).show();
@@ -72,7 +69,6 @@ public class TrackLocation extends BroadcastReceiver
                         mGoogleApiClient.connect();
 
                         //Toast.makeText(context, "Tracking started...", Toast.LENGTH_LONG).show();
-
                         Toast.makeText(context, "Finding location...", Toast.LENGTH_LONG).show();
 
                         myPhone.setTrackingStatus(true);
@@ -101,7 +97,7 @@ public class TrackLocation extends BroadcastReceiver
                         + "http://maps.google.com/maps?q=" + lat + "," + lang
                         + "\nSent via Tomato Safety App.";
 
-                // Toast.makeText(mContext, msg, Toast.LENGTH_LONG).show();
+                //Toast.makeText(mContext, msg, Toast.LENGTH_LONG).show();
                 SmsManager manager = SmsManager.getDefault();
 
                 manager.sendTextMessage(
@@ -133,23 +129,36 @@ public class TrackLocation extends BroadcastReceiver
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
+        //toast("connected");
+
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
         if (mLastLocation != null) {
+            //toast("location not null");
             sendSMS(mLastLocation.getLatitude(), mLastLocation.getLongitude());
+        } else {
+            // toast("location null");
         }
     }
 
     @Override
     public void onConnectionSuspended(int i) {
+        //toast("connection suspended");
 
     }
 
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        //toast("connection failed");
+    }
+
+    void toast(String s) {
+        Toast.makeText(mContext, s, Toast.LENGTH_LONG).show();
 
     }
+
+
 }
 
 

@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (authenticate()) {
-                        startActivity(new Intent(mContext, StatusActivity.class));
+                        startActivity(new Intent(mContext, Status.class));
                         Login.this.finish();
                     } else {
                         //invalid details

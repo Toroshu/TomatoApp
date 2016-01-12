@@ -75,10 +75,10 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:background="#6bd7a4"
-        android:paddingBottom="20dp"
+        android:paddingBottom="10dp"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:text="@string/txt_signin"
         android:textColor="#fff" />
 
@@ -93,10 +93,10 @@
 
         android:layout_marginTop="20dp"
         android:background="#6bd7a4"
-        android:paddingBottom="20dp"
+        android:paddingBottom="10dp"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:text="Create my account"
         android:textColor="#fff" />
 

@@ -9,7 +9,6 @@ import android.view.View;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import toroshu.tomato.R;
@@ -29,15 +28,15 @@ public class About extends AppCompatActivity {
             } else {
                 setContentView(R.layout.activity_about_faq);
                 WebView webView = (WebView) findViewById(R.id.webView);
-                webView.loadUrl("file:///android_asset/FAQ.html");
-              /*  webView.getSettings().setJavaScriptEnabled(true);
-
-                webView.loadUrl("http://www.ducic.ac.in");
+                // webView.loadUrl("file:///android_asset/FAQ.html");
+                webView.getSettings().setJavaScriptEnabled(true);
                 webView.setWebViewClient(new WebViewClient() {
                     public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                         handler.proceed();
                     }
-                });*/
+                });
+                webView.loadUrl("http://www.google.com");
+
             }
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();

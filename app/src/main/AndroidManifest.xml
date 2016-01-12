@@ -12,8 +12,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 
     <application
         android:allowBackup="true"
@@ -30,49 +29,39 @@
             android:name=".ui.About"
             android:label="@string/title_activity_about"
             android:theme="@style/BlackishTheme" />
-
         <activity
             android:name=".ui.Credits"
             android:label="@string/title_activity_credits"
             android:theme="@style/BlackishTheme" />
-
         <activity
             android:name=".ui.Login"
             android:icon="@drawable/logo"
             android:label=" "
             android:theme="@style/DialogTheme" />
-
         <activity
             android:name=".ui.RecoverPassword"
             android:label="@string/title_activity_recover_password"
             android:theme="@style/DialogTheme" />
-
         <activity
             android:name=".ui.Register"
             android:label="Just one more step" />
-
         <activity
             android:name=".ui.Splash"
             android:label="Tomato"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:name=".ui.StatusActivity"
+            android:name=".ui.Status"
             android:icon="@drawable/logo"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/ToolbarTheme">
-
-
-        </activity>
+            android:theme="@style/ToolbarTheme" />
         <activity
             android:name=".ui.TermsAndConditions"
             android:label="@string/title_activity_terms_and_conditions"
@@ -84,8 +73,6 @@
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
-
-
         <receiver
             android:name=".ninja.SMSReceiver"
             android:enabled="true"
@@ -94,7 +81,6 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-
 
         <!-- Include the AdActivity configChanges and theme. -->
         <activity
@@ -111,7 +97,7 @@
             </intent-filter>
         </receiver>
 
-
+        <activity android:name=".ui.FeatureX"></activity>
     </application>
 
 </manifest>

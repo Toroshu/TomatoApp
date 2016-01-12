@@ -103,7 +103,7 @@ ADDED from AndroidManifest.xml:34:9
 		ADDED from AndroidManifest.xml:36:13
 	android:name
 		ADDED from AndroidManifest.xml:35:13
-activity#toroshu.tomato.ui.StatusActivity
+activity#toroshu.tomato.ui.Status
 ADDED from AndroidManifest.xml:38:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:42:13

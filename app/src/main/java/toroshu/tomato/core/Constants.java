@@ -1,8 +1,5 @@
 package toroshu.tomato.core;
 
-/**
- * Created by OFFICE on 2/4/2015.
- */
 public final class Constants {
 
     public static final String ALREADY_REGISTERED = "ALREADY REGISTERED";
@@ -18,9 +15,7 @@ public final class Constants {
     public static final String ALERT_MODE = "alert mode";
     public static final String NUM_UPDATES = "number of sms updates";
     public static final String TRACK = "track";
-
-
-
+    public static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
 
 }
