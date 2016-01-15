@@ -2,6 +2,7 @@ package toroshu.tomato.core;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 
 /**
  * Created by saini on 08-01-2016.
@@ -100,6 +101,10 @@ public class Phone {
     public void setTrackingStatus(boolean status) {
         editor.putBoolean(Constants.TRACK, status);
         editor.apply();
+    }
+
+    public Typeface getTypeface() {
+        return Typeface.createFromAsset(mContext.getAssets(), "fonts/latom.ttf");
     }
 
 

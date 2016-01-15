@@ -2,13 +2,10 @@ package toroshu.tomato.ui;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import toroshu.tomato.R;
@@ -28,14 +25,14 @@ public class About extends AppCompatActivity {
             } else {
                 setContentView(R.layout.activity_about_faq);
                 WebView webView = (WebView) findViewById(R.id.webView);
-                // webView.loadUrl("file:///android_asset/FAQ.html");
-                webView.getSettings().setJavaScriptEnabled(true);
+                webView.loadUrl("file:///android_asset/FAQ.html");
+               /* webView.getSettings().setJavaScriptEnabled(true);
                 webView.setWebViewClient(new WebViewClient() {
                     public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                         handler.proceed();
                     }
                 });
-                webView.loadUrl("http://www.google.com");
+                webView.loadUrl("http://www.google.com");*/
 
             }
         } catch (Exception e) {

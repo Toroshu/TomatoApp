@@ -15,8 +15,8 @@ import com.gc.materialdesign.views.ButtonRectangle;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
-import toroshu.tomato.core.Constants;
 import toroshu.tomato.R;
+import toroshu.tomato.core.Constants;
 import toroshu.tomato.core.Phone;
 
 /*
@@ -49,6 +49,9 @@ public class Register extends AppCompatActivity {
 
         mFirstSuperHero = (FormEditText) findViewById(R.id.firsthnField);
         mSecondSuperHero = (FormEditText) findViewById(R.id.secondhnField);
+        mFirstSuperHero.setTypeface(myPhone.getTypeface());
+        mSecondSuperHero.setTypeface(myPhone.getTypeface());
+
         mCheckBox = (CheckBox) findViewById(R.id.checkbox);
 
 

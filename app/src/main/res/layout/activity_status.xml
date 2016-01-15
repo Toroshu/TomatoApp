@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_margin="20dp" />
+        android:layout_margin="5dp" />
 
 
     <com.gc.materialdesign.views.ButtonRectangle
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:background="@color/monster_red"
         android:text="Switch off the Security" />
 </RelativeLayout>

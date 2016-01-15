@@ -25,6 +25,8 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         logo = (ImageView) findViewById(R.id.logo);
 
+        checkGooglePlayServicesAvailablility();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -36,8 +38,6 @@ public class Splash extends AppCompatActivity {
                 }
             }
         }).start();
-
-        checkGooglePlayServicesAvailablility();
 
 
     }

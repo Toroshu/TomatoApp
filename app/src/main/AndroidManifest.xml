@@ -97,7 +97,6 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".ui.FeatureX"></activity>
     </application>
 
 </manifest>

@@ -2,7 +2,6 @@ package toroshu.tomato.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -41,18 +40,26 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
         initView();
     }
 
     private void initView() {
+        mContext = getApplicationContext();
+        //for saving data
+        myPhone = new Phone(mContext);
 
         //Edit texts
         mUserName = (FormEditText) findViewById(R.id.usernameField);
         mPassword = (FormEditText) findViewById(R.id.heroNumberField);
+        mUserName.setTypeface(myPhone.getTypeface());
+        mPassword.setTypeface(myPhone.getTypeface());
 
         mWelcomeMessage = (TextView) findViewById(R.id.welcomeText);
-        mWelcomeMessage.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/roboto.ttf"));
-        mContext = getApplicationContext();
+        //mWelcomeMessage.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/roboto.ttf"));
+        mWelcomeMessage.setTypeface(myPhone.getTypeface());
+
 
         //Buttons
         mSign = (ButtonRectangle) findViewById(R.id.signButton);
@@ -64,8 +71,6 @@ public class Login extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        //for saving data
-        myPhone = new Phone(mContext);
 
         if (!myPhone.isRegistered()) {
             //sign up
