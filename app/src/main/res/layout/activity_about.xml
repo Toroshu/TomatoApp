@@ -39,10 +39,9 @@
             android:padding="5dp"
             android:text="\nToroshu Inc. is a tech startup started by three friends who have a strong urge to do things in a different way.\n
 \n\nAt Toroshu Inc. we believe in using the technology to bring about changes.\n\n
-We move around, observe and continuously thrive upon the solutions. We write programs, build prototypes, do brain storming, cook ideas in our Engineering Kitchen.
+We move around, observe and continuously work on the solutions. We write programs, build prototypes, do brain storming, cook ideas in our Engineering Kitchen.
 \n\n
 You can reach to us at: teamtoroshu@gmail.com"
-
             android:textColor="#fff" />
 
     </ScrollView>

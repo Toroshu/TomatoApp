@@ -3,12 +3,10 @@ package toroshu.tomato.ninja;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.os.Handler;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
-import android.widget.Toast;
 
-import toroshu.tomato.core.Constants;
 import toroshu.tomato.core.Phone;
 
 /**
@@ -18,13 +16,14 @@ public class BootReceiver extends BroadcastReceiver {
 
     TelephonyManager tm;
     Phone myPhone;
+    Context mContext;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
         try {
-
+            mContext = context;
             myPhone = new Phone(context);
-            new Thread(new Runnable() {
+            /*new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
@@ -32,47 +31,16 @@ public class BootReceiver extends BroadcastReceiver {
                     } catch (InterruptedException e) {
                     }
                 }
-            }).start();
+            }).start();*/
 
-
-            tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-
-
-            boolean protectionOn = myPhone.isProtectionOn();
-            String newSimID = tm.getSimSerialNumber();
-            String oldSimID = myPhone.getSIMId();
-
-            if (protectionOn && newSimID.length() != 0 && !newSimID.equals(oldSimID)) {
-                // sim is changed
-
-                myPhone.startAlertMode();
-                try {
-                    SmsManager manager = SmsManager.getDefault();
-                    String msg = myPhone.getUsername() +
-                            "\'s phone with IMEI no. " + tm.getDeviceId() +
-                            " has been stolen." +
-                            " It is being used by the sender of this message.";
-
-                    manager.sendTextMessage(
-                            myPhone.getFSH(),
-                            null,
-                            msg, null, null);
-
-                    manager.sendTextMessage(
-                            myPhone.getSSH(),
-                            null,
-                            msg,
-                            null, null);
-
-
-                } catch (Exception e) {
-
+            // Execute some code after 2 seconds have passed
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    bootChecks();
                 }
-            } else {
-                Toast.makeText(context, "No Action Needed...", Toast.LENGTH_LONG).show();
-                myPhone.stopAlertMode();
+            }, 25000);
 
-            }
 
         } catch (Exception e) {
             //Ultimate catch
@@ -81,5 +49,45 @@ public class BootReceiver extends BroadcastReceiver {
         myPhone.setnu(0);
     }
 
+    void bootChecks() {
+        tm = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+
+
+        boolean protectionOn = myPhone.isProtectionOn();
+        String newSimID = tm.getSimSerialNumber();
+        String oldSimID = myPhone.getSIMId();
+
+        if (protectionOn && newSimID.length() != 0 && !newSimID.equals(oldSimID)) {
+            // sim is changed
+
+            myPhone.startAlertMode();
+            try {
+                SmsManager manager = SmsManager.getDefault();
+                String msg = myPhone.getUsername() +
+                        "\'s phone with IMEI no. " + tm.getDeviceId() +
+                        " has been stolen." +
+                        " It is being used by the sender of this message.";
+
+                manager.sendTextMessage(
+                        myPhone.getFSH(),
+                        null,
+                        msg, null, null);
+
+                manager.sendTextMessage(
+                        myPhone.getSSH(),
+                        null,
+                        msg,
+                        null, null);
+
+
+            } catch (Exception e) {
+
+            }
+        } else {
+            //Toast.makeText(context, "No Action Needed...", Toast.LENGTH_LONG).show();
+            myPhone.stopAlertMode();
+
+        }
+    }
 
 }

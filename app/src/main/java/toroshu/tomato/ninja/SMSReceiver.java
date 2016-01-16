@@ -3,15 +3,14 @@ package toroshu.tomato.ninja;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 
 import toroshu.tomato.R;
-import toroshu.tomato.core.Constants;
 import toroshu.tomato.core.Phone;
+
 /*
 starts a siren sound on receiving a sms
 */
