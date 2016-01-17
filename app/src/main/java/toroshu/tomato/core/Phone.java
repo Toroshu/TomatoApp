@@ -3,6 +3,7 @@ package toroshu.tomato.core;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.widget.Toast;
 
 /**
  * Created by saini on 08-01-2016.
@@ -80,6 +81,10 @@ public class Phone {
         editor.apply();
     }
 
+    public boolean isAlertModeOn() {
+        return prefs.getBoolean(Constants.ALERT_MODE, false);
+    }
+
     public void stopAlertMode() {
         editor.putBoolean(Constants.ALERT_MODE, false);
         editor.apply();
@@ -105,6 +110,10 @@ public class Phone {
 
     public Typeface getTypeface() {
         return Typeface.createFromAsset(mContext.getAssets(), "fonts/latom.ttf");
+    }
+
+    public void toast(String s) {
+        Toast.makeText(mContext, s, Toast.LENGTH_LONG).show();
     }
 
 

@@ -3,15 +3,13 @@ package toroshu.tomato.ninja;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 import toroshu.tomato.core.Phone;
 
-/**
- * Created by Saini on 2/5/2015.
- */
+
 public class BootReceiver extends BroadcastReceiver {
 
     TelephonyManager tm;
@@ -21,44 +19,46 @@ public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         try {
+
             mContext = context;
             myPhone = new Phone(context);
-            /*new Thread(new Runnable() {
+
+            //toast("Starting the phone");
+            new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(10000);
+                        //toast("sleeping");
+                        Thread.sleep(9000);
                     } catch (InterruptedException e) {
+                        toast(e.toString());
                     }
                 }
-            }).start();*/
+            }).start();
 
-            // Execute some code after 2 seconds have passed
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    bootChecks();
-                }
-            }, 25000);
-
+            //toast("awake");
+            bootChecks();
 
         } catch (Exception e) {
-            //Ultimate catch
-            //Toast.makeText(context, "Outer try: " + e.toString(), Toast.LENGTH_LONG).show();
+            //toast(e.toString());
         }
-        myPhone.setnu(0);
     }
 
     void bootChecks() {
         tm = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
 
-
         boolean protectionOn = myPhone.isProtectionOn();
         String newSimID = tm.getSimSerialNumber();
         String oldSimID = myPhone.getSIMId();
 
+       /* if (protectionOn)
+            toast("on");
+        else
+            toast("off");*/
+
         if (protectionOn && newSimID.length() != 0 && !newSimID.equals(oldSimID)) {
             // sim is changed
+            //toast("sim is changed");
 
             myPhone.startAlertMode();
             try {
@@ -79,15 +79,19 @@ public class BootReceiver extends BroadcastReceiver {
                         msg,
                         null, null);
 
-
             } catch (Exception e) {
-
+                //toast(e.toString());
             }
         } else {
-            //Toast.makeText(context, "No Action Needed...", Toast.LENGTH_LONG).show();
+            //toast("No Action Needed...");
             myPhone.stopAlertMode();
-
         }
+    }
+
+    public void toast(String s) {
+
+        //Toast.makeText(mContext, s, Toast.LENGTH_LONG).show();
+        Log.e("TOMATO", s);
     }
 
 }

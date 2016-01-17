@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.gc.materialdesign.views.ButtonRectangle;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
@@ -51,9 +53,9 @@ public class Status extends AppCompatActivity {
 
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
-        // AdView mAdView = (AdView) findViewById(R.id.adView);
-        //AdRequest adRequest = new AdRequest.Builder().build();
-        // mAdView.loadAd(adRequest);
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        //mAdView.loadAd(adRequest);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -222,7 +224,7 @@ public class Status extends AppCompatActivity {
                 myPhone.disableProtection();
                 mStatus.setImageResource(R.drawable.sad);
                 mturnoff.setVisibility(View.GONE);
-               // toolbar.setBackgroundColor(getResources().getColor(R.color.md_red_300));
+                // toolbar.setBackgroundColor(getResources().getColor(R.color.md_red_300));
                 initND();
 
             }
@@ -246,7 +248,7 @@ public class Status extends AppCompatActivity {
 
         } else {
 
-            myPhone.setSIMId( tm.getSimSerialNumber());
+            myPhone.setSIMId(tm.getSimSerialNumber());
             mStatus.setImageResource(R.drawable.dragon);
 
             //toolbar.setBackgroundColor(getResources().getColor(R.color.ok));

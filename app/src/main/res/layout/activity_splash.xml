@@ -27,5 +27,14 @@
         android:onClick="gotomid"
         android:src="@drawable/mid" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:onClick="openFeatureX"
+        android:text="Feature X"
+        android:visibility="gone" />
+
 
 </RelativeLayout>

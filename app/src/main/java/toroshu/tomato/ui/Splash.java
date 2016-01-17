@@ -43,9 +43,7 @@ public class Splash extends AppCompatActivity {
     }
 
     public void navigate(View v) {
-        //YoYo.with(Techniques.Bounce).duration(500).playOn(logo);
         startActivity(new Intent(getBaseContext(), Login.class));
-        //startActivity(new Intent(getBaseContext(), FeatureX.class));
 
     }
 
@@ -69,6 +67,10 @@ public class Splash extends AppCompatActivity {
         }
     }
 
+
+    public void openFeatureX(View v) {
+        startActivity(new Intent(getBaseContext(), FeatureX.class));
+    }
 }
 
 
