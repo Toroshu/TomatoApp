@@ -25,7 +25,7 @@ It provides three tier of security to your phone:
 ![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/5.jpg)
 ![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/6.jpg)
 
-Know more about us at [here](torosohulabs.co)
+Know more about us at [here](http://torosohulabs.co)
 
 ## License
 
