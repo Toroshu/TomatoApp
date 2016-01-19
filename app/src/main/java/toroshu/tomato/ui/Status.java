@@ -55,7 +55,7 @@ public class Status extends AppCompatActivity {
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        //mAdView.loadAd(adRequest);
+        // mAdView.loadAd(adRequest);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
