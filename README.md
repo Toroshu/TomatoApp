@@ -14,7 +14,7 @@ It provides three tier of security to your phone:
 
 
 
-**Find it on [play store](https://play.google.com/store/apps/details?id=toroshu.tomato)**
+Find it on [play store](https://play.google.com/store/apps/details?id=toroshu.tomato)
 
 ## Screenshots
 
@@ -25,7 +25,7 @@ It provides three tier of security to your phone:
 ![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/5.jpg)
 ![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/6.jpg)
 
-Know more about us at [here](http://torosohulabs.co)
+Know more about us at [here](http://toroshulabs.co)
 
 ## License
 
