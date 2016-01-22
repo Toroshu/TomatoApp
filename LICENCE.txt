@@ -1,35 +1,3 @@
-# TomatoApp
-Tomato Safety is an android app which can help you in protecting your smartphone from being stolen.
-
------------
-
-
-## Features
-
-It provides three tier of security to your phone:
-
-1. sim change notifications 
-2. remotely tracking of your phone 
-3. starting siren by a SMS 
-
-------------
-Find it on [play store](https://play.google.com/store/apps/details?id=toroshu.tomato)
-------------
-
-## Screenshots
-
-![Home Screen](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/1.jpg)
-![Register Yourself](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/2.jpg)
-![Add super hero's numbers](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/3.jpg)
-![Get relaxed now because...](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/4.jpg)
-![Simple and clean UI](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/5.jpg)
-![3 tiers of security](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/6.jpg)
-
---------------
-Know more about us at [here](http://toroshulabs.co)
---------------
-## License
-
 The MIT License (MIT)
 
 Copyright (c) 2016  Toroshu Labs
