@@ -1,36 +1,53 @@
 # TomatoApp
 Tomato Safety is an android app which can help you in protecting your smartphone from being stolen.
 
+-----------
+
 
 ## Features
 
 It provides three tier of security to your phone:
 
-1. sim change notifications
+1. sim change notifications 
+2. remotely tracking of your phone 
+3. starting siren by a SMS 
 
-2. remotely tracking of your phone
-
-3. starting siren by a sms
-
-
-
+------------
 Find it on [play store](https://play.google.com/store/apps/details?id=toroshu.tomato)
+------------
 
 ## Screenshots
 
-![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/1.jpg)
-![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/2.jpg)
-![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/3.jpg)
-![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/4.jpg)
-![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/5.jpg)
-![] (https://github.com/Toroshu/TomatoApp/blob/master/screenshots/6.jpg)
+![Home Screen](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/1.jpg)
+![Register Yourself](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/2.jpg)
+![Add super hero's numbers](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/3.jpg)
+![Get relaxed now because...](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/4.jpg)
+![Simple and clean UI](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/5.jpg)
+![3 tiers of security](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/6.jpg)
 
+--------------
 Know more about us at [here](http://toroshulabs.co)
-
+--------------
 ## License
 
-"THE BEER-WARE LICENSE" (Revision 42):
+The MIT License (MIT)
 
-You can do whatever you want with this stuff. 
+Copyright (c) 2016  Toroshu Labs
 
-If we meet some day, and you think this stuff is worth it, you can buy me a beer in return.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
