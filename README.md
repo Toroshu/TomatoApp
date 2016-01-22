@@ -1,7 +1,6 @@
 # TomatoApp
 Tomato Safety is an android app which can help you in protecting your smartphone from being stolen.
 
------------
 
 
 ## Features
@@ -12,9 +11,8 @@ It provides three tier of security to your phone:
 2. remotely tracking of your phone 
 3. starting siren by a SMS 
 
-------------
-Find it on [play store](https://play.google.com/store/apps/details?id=toroshu.tomato)
-------------
+
+[![Link to play store](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/playstorelink.jpg)](https://play.google.com/store/apps/details?id=toroshu.tomato)
 
 ## Screenshots
 
@@ -25,9 +23,9 @@ Find it on [play store](https://play.google.com/store/apps/details?id=toroshu.to
 ![Simple and clean UI](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/5.jpg)
 ![3 tiers of security](https://github.com/Toroshu/TomatoApp/blob/master/screenshots/6.jpg)
 
---------------
-Know more about us at [here](http://toroshulabs.co)
---------------
+
+Know more about us at [toroshulabs.co](http://toroshulabs.co)
+
 ## License
 
 The MIT License (MIT)
@@ -44,10 +42,3 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
