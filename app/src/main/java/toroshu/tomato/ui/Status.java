@@ -248,6 +248,7 @@ public class Status extends AppCompatActivity {
 
         } else {
 
+
             myPhone.setSIMId(tm.getSimSerialNumber());
             mStatus.setImageResource(R.drawable.dragon);
 
@@ -255,11 +256,10 @@ public class Status extends AppCompatActivity {
             initND();
             mturnoff.setVisibility(View.VISIBLE);
             showFeatures(mStatus);
-
         }
 
-
     }
+
 
     public void showFeatures(View v) {
 

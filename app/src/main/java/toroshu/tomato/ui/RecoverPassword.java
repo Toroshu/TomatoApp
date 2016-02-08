@@ -34,8 +34,8 @@ public class RecoverPassword extends Activity {
         mguessNumberField = (FormEditText) findViewById(R.id.heroNumberField);
         mguessNumberField.setTypeface(myPhone.getTypeface());
         mguessNumberField.setHint(getResources().getString(R.string.msg_guess_number) + " " +
-                myPhone.getFSH().substring(0, 6)
-                + "****");
+                myPhone.getFSH().substring(0, 3)
+                + "*******");
 
     }
 

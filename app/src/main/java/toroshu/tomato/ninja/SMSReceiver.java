@@ -21,8 +21,7 @@ public class SMSReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        AudioManager audioManager = (AudioManager)
-                context.getSystemService(Context.AUDIO_SERVICE);
+
 
         final Bundle bundle = intent.getExtras();
 
@@ -47,6 +46,11 @@ public class SMSReceiver extends BroadcastReceiver {
                     if (message.length() == 10 && message.substring(0, 10).equalsIgnoreCase("siren " +
                             password.substring(start))) {
 
+                        MediaPlayer siren = MediaPlayer.create(context, R.raw.siren);
+
+                        AudioManager audioManager = (AudioManager)
+                                context.getSystemService(Context.AUDIO_SERVICE);
+
                         audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
                         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,
                                 audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC),
@@ -54,11 +58,7 @@ public class SMSReceiver extends BroadcastReceiver {
                                         | AudioManager.FLAG_PLAY_SOUND
                         );
 
-                        MediaPlayer siren = MediaPlayer.create(context, R.raw.siren);
-
                         siren.start();
-                    } else {
-                        //Do nothing
                     }
 
                 } // end for loop
