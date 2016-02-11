@@ -29,13 +29,13 @@ public class Phone {
         return prefs.getString(Constants.USERNAME, null);
     }
 
-    public String getPassword() {
-        return prefs.getString(Constants.PASSWORD, null);
-    }
-
     public void setUsername(String username) {
         editor.putString(Constants.USERNAME, username);
         editor.commit();
+    }
+
+    public String getPassword() {
+        return prefs.getString(Constants.PASSWORD, null);
     }
 
     public void setPassword(String password) {
@@ -66,14 +66,14 @@ public class Phone {
         editor.apply();
     }
 
+    public String getSIMId() {
+        return prefs.getString(Constants.SIM_ID, null);
+    }
+
     public void setSIMId(String id) {
         editor.putBoolean(Constants.PROTECTION_ON, true);
         editor.putString(Constants.SIM_ID, id);
         editor.commit();
-    }
-
-    public String getSIMId() {
-        return prefs.getString(Constants.SIM_ID, null);
     }
 
     public void startAlertMode() {

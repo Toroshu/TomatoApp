@@ -16,6 +16,7 @@ public final class Constants {
     public static final String NUM_UPDATES = "number of sms updates";
     public static final String TRACK = "track";
     public static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    public static final String SAVED_SIMS = "SAVEDSIMS";
 
 
 }

@@ -15,6 +15,7 @@ public class BootReceiver extends BroadcastReceiver {
     TelephonyManager tm;
     Phone myPhone;
     Context mContext;
+    int READ_SIM_SERIAL_NUMBER_PERMISSION;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -36,8 +37,10 @@ public class BootReceiver extends BroadcastReceiver {
                 }
             }).start();
 
+
             //toast("awake");
             bootChecks();
+
 
         } catch (Exception e) {
             //toast(e.toString());

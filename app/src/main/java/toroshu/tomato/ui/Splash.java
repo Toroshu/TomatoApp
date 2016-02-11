@@ -2,11 +2,13 @@ package toroshu.tomato.ui;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
@@ -27,23 +29,21 @@ public class Splash extends AppCompatActivity {
 
         checkGooglePlayServicesAvailablility();
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(1000);
-                    navigate(logo);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-
-
+        navigate(logo);
     }
 
     public void navigate(View v) {
-        startActivity(new Intent(getBaseContext(), Login.class));
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
+            startActivity(new Intent(getBaseContext(), Login.class));
+        else
+            new MaterialDialog.Builder(this)
+                    .title("Important")
+                    .content("Due to recent changes in permission system for Android M, the app might" +
+                            " not work in Android M+ devices. We are working on a patch to fix the problem." +
+                            "\n- Team Toroshu")
+                    .positiveText("Got it")
+                    .show();
+
 
     }
 

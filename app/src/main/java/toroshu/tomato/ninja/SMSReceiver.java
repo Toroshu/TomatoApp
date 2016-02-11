@@ -15,12 +15,14 @@ import toroshu.tomato.core.Phone;
 starts a siren sound on receiving a sms
 */
 public class SMSReceiver extends BroadcastReceiver {
+
+    private static MediaPlayer siren;
+
     public SMSReceiver() {
     }
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
 
 
         final Bundle bundle = intent.getExtras();
@@ -46,7 +48,7 @@ public class SMSReceiver extends BroadcastReceiver {
                     if (message.length() == 10 && message.substring(0, 10).equalsIgnoreCase("siren " +
                             password.substring(start))) {
 
-                        MediaPlayer siren = MediaPlayer.create(context, R.raw.siren);
+                        siren = MediaPlayer.create(context, R.raw.siren);
 
                         AudioManager audioManager = (AudioManager)
                                 context.getSystemService(Context.AUDIO_SERVICE);

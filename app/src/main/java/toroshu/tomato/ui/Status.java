@@ -44,7 +44,7 @@ public class Status extends AppCompatActivity {
     Drawer result;
 
     ButtonRectangle mturnoff;
-
+    int READ_SIM_SERIAL_NUMBER_PERMISSION;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class Status extends AppCompatActivity {
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        // mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -239,20 +239,15 @@ public class Status extends AppCompatActivity {
     public void hearShakes() {
 
         //Toast.makeText(getApplicationContext(), "Shake me!!", Toast.LENGTH_SHORT).show();
-
-
         vibrator.vibrate(500);
 
         if (myPhone.isProtectionOn()) {
             showWarning(mStatus);
 
         } else {
-
-
+            // Read SIM Serial number
             myPhone.setSIMId(tm.getSimSerialNumber());
             mStatus.setImageResource(R.drawable.dragon);
-
-            //toolbar.setBackgroundColor(getResources().getColor(R.color.ok));
             initND();
             mturnoff.setVisibility(View.VISIBLE);
             showFeatures(mStatus);
