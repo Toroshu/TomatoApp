@@ -1,16 +1,15 @@
 package toroshu.tomato.ui;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.telephony.SmsManager;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.andreabaccega.widget.FormEditText;
-
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import toroshu.tomato.R;
 import toroshu.tomato.core.Phone;
 
@@ -20,30 +19,32 @@ import toroshu.tomato.core.Phone;
 
 public class RecoverPassword extends Activity {
 
-    FormEditText mguessNumberField;
+    @BindView(R.id.heroNumberField)
+    EditText heroField;
+
     Phone myPhone;
-    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recover_password);
 
-        mContext = getApplicationContext();
-        myPhone = new Phone(mContext);
-        mguessNumberField = (FormEditText) findViewById(R.id.heroNumberField);
-        mguessNumberField.setTypeface(myPhone.getTypeface());
-        mguessNumberField.setHint(getResources().getString(R.string.msg_guess_number) + " " +
+        ButterKnife.bind(this);
+
+        myPhone = new Phone(this);
+
+        heroField.setTypeface(myPhone.getTypeface());
+        heroField.setHint(getResources().getString(R.string.msg_guess_number) + " " +
                 myPhone.getFSH().substring(0, 3)
                 + "*******");
 
     }
 
     public void proceed(View v) {
+//heroField.testValidity() &&
 
-
-        if (mguessNumberField.testValidity() &&
-                myPhone.getFSH().equals(mguessNumberField.getText().toString())) {
+        if (
+                myPhone.getFSH().equals(heroField.getText().toString())) {
 
             SmsManager manager = SmsManager.getDefault();
             manager.sendTextMessage(
@@ -56,8 +57,8 @@ public class RecoverPassword extends Activity {
             this.finish();
 
         } else {
-            Crouton.makeText(RecoverPassword.this,
-                    "Invalid Number. Try Again", Style.ALERT).show();
+            Snackbar.make(heroField,
+                    "Invalid Number. Try Again", Snackbar.LENGTH_SHORT).show();
 
         }
     }

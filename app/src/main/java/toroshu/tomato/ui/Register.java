@@ -3,20 +3,18 @@ package toroshu.tomato.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.andreabaccega.formedittextvalidator.Validator;
-import com.andreabaccega.widget.FormEditText;
-import com.gc.materialdesign.views.ButtonRectangle;
 
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import toroshu.tomato.R;
-import toroshu.tomato.core.Constants;
 import toroshu.tomato.core.Phone;
 
 /*
@@ -25,9 +23,18 @@ import toroshu.tomato.core.Phone;
 */
 public class Register extends AppCompatActivity {
 
-    FormEditText mFirstSuperHero, mSecondSuperHero;
+    @BindView(R.id.firsthnField)
+    EditText mFirstSuperHero;
+
+    @BindView(R.id.secondhnField)
+    EditText mSecondSuperHero;
+
     String firstSuperHero, secondSuperHero;
-    ButtonRectangle mProceed;
+
+    @BindView(R.id.proceedButton)
+    Button mProceed;
+
+    @BindView(R.id.checkbox)
     CheckBox mCheckBox;
 
     Phone myPhone;
@@ -44,32 +51,29 @@ public class Register extends AppCompatActivity {
     }
 
     private void initView() {
+        ButterKnife.bind(this);
         mContext = getApplicationContext();
         myPhone = new Phone(mContext);
 
-        mFirstSuperHero = (FormEditText) findViewById(R.id.firsthnField);
-        mSecondSuperHero = (FormEditText) findViewById(R.id.secondhnField);
+
         mFirstSuperHero.setTypeface(myPhone.getTypeface());
         mSecondSuperHero.setTypeface(myPhone.getTypeface());
 
-        mCheckBox = (CheckBox) findViewById(R.id.checkbox);
 
+//        mFirstSuperHero.addValidator(new Validator("Choose a 10 phone number") {
+//            @Override
+//            public boolean isValid(EditText editText) {
+//                return (firstSuperHero.length() == 10);
+//            }
+//        });
+//
+//        mSecondSuperHero.addValidator(new Validator("Choose another 10 phone number") {
+//            @Override
+//            public boolean isValid(EditText editText) {
+//                return (secondSuperHero.length() == 10);
+//            }
+//        });
 
-        mFirstSuperHero.addValidator(new Validator("Choose a 10 phone number") {
-            @Override
-            public boolean isValid(EditText editText) {
-                return (firstSuperHero.length() == 10);
-            }
-        });
-
-        mSecondSuperHero.addValidator(new Validator("Choose another 10 phone number") {
-            @Override
-            public boolean isValid(EditText editText) {
-                return (secondSuperHero.length() == 10);
-            }
-        });
-
-        mProceed = (ButtonRectangle) findViewById(R.id.proceedButton);
         mProceed.setVisibility(View.INVISIBLE);
         mProceed.setEnabled(false);
 
@@ -96,24 +100,24 @@ public class Register extends AppCompatActivity {
         secondSuperHero = mSecondSuperHero.getText().toString().trim();
 
         if (firstSuperHero.equals(secondSuperHero)) {
-            Crouton.makeText(this, "You need to enter two different phone numbers", Style.ALERT).show();
+            Snackbar.make(mFirstSuperHero, "You need to enter two different phone numbers", Snackbar.LENGTH_SHORT).show();
             return;
         }
-        if (mFirstSuperHero.testValidity() && mSecondSuperHero.testValidity()) {
-
-            myPhone.registerPhone(firstSuperHero, secondSuperHero);
-
-            // login
-            Intent intent = new Intent(Register.this, Login.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            intent.putExtra(Constants.DISPLAY_ACCOUNT_CONFIRMATION, true);
-            startActivity(intent);
-        } else {
-            // Try again
-            //Toast.makeText(getBaseContext(), "Try Again "
-            //      , Toast.LENGTH_SHORT).show();
-        }
+//        if (mFirstSuperHero.testValidity() && mSecondSuperHero.testValidity()) {
+//
+//            myPhone.registerPhone(firstSuperHero, secondSuperHero);
+//
+//            // login
+//            Intent intent = new Intent(Register.this, Login.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            intent.putExtra(Constants.DISPLAY_ACCOUNT_CONFIRMATION, true);
+//            startActivity(intent);
+//        } else {
+//            // Try again
+//            //Toast.makeText(getBaseContext(), "Try Again "
+//            //      , Toast.LENGTH_SHORT).show();
+//        }
     }
 
     public void readTnCDetails(View v) {

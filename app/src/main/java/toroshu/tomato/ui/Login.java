@@ -3,20 +3,15 @@ package toroshu.tomato.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.andreabaccega.formedittextvalidator.Validator;
-import com.andreabaccega.widget.FormEditText;
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
-import com.gc.materialdesign.views.ButtonFlat;
-import com.gc.materialdesign.views.ButtonRectangle;
-
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import toroshu.tomato.R;
 import toroshu.tomato.core.Phone;
 
@@ -25,10 +20,21 @@ import toroshu.tomato.core.Phone;
 */
 public class Login extends AppCompatActivity {
 
-    ButtonRectangle mSign;
-    ButtonRectangle mRegister;
-    ButtonFlat mfyp;
-    FormEditText mUserName, mPassword;
+    // @BindView()
+
+    @BindView(R.id.signButton)
+    Button mSign;
+    @BindView(R.id.registerButton)
+    Button mRegister;
+    @BindView(R.id.fypButton)
+    Button mfyp;
+
+    @BindView(R.id.usernameField)
+    EditText mUserName;
+    @BindView(R.id.heroNumberField)
+    EditText mPassword;
+
+//    @BindView(R.id.welcomeText)
     TextView mWelcomeMessage;
 
     String username, password;
@@ -46,25 +52,24 @@ public class Login extends AppCompatActivity {
     }
 
     private void initView() {
+
+        ButterKnife.bind(this);
         mContext = getApplicationContext();
         //for saving data
         myPhone = new Phone(mContext);
 
         //Edit texts
-        mUserName = (FormEditText) findViewById(R.id.usernameField);
-        mPassword = (FormEditText) findViewById(R.id.heroNumberField);
+
         mUserName.setTypeface(myPhone.getTypeface());
         mPassword.setTypeface(myPhone.getTypeface());
 
-        mWelcomeMessage = (TextView) findViewById(R.id.welcomeText);
-        //mWelcomeMessage.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/roboto.ttf"));
         mWelcomeMessage.setTypeface(myPhone.getTypeface());
 
 
         //Buttons
-        mSign = (ButtonRectangle) findViewById(R.id.signButton);
-        mRegister = (ButtonRectangle) findViewById(R.id.registerButton);
-        mfyp = (ButtonFlat) findViewById(R.id.fypButton);
+        mSign = (Button) findViewById(R.id.signButton);
+        mRegister = (Button) findViewById(R.id.registerButton);
+        mfyp = (Button) findViewById(R.id.fypButton);
     }
 
     @Override
@@ -92,10 +97,9 @@ public class Login extends AppCompatActivity {
                         Login.this.finish();
                     } else {
                         //invalid details
-                        YoYo.with(Techniques.Wobble).duration(1000).playOn(mPassword);
-                        Crouton.makeText(Login.this,
+                        Snackbar.make(mfyp,
                                 "Invalid details. Try Again",
-                                Style.ALERT).show();
+                                Snackbar.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -127,22 +131,10 @@ public class Login extends AppCompatActivity {
                          username = mUserName.getText().toString().trim();
                          password = mPassword.getText().toString().trim();
 
-                         mUserName.addValidator(new Validator("Entered name too short ") {
-                             @Override
-                             public boolean isValid(EditText editText) {
-                                 return username.length() >= 4;
-                             }
-                         });
-
-                         mPassword.addValidator(new Validator("Entered password too short ") {
-                             @Override
-                             public boolean isValid(EditText editText) {
-                                 return password.length() >= 6;
-                             }
-                         });
 
 
-                         if (mUserName.testValidity() && mPassword.testValidity()) {
+
+                         if (isInputValid()) {
                              myPhone.setPassword(password);
                              myPhone.setUsername(username);
                              startActivity(new Intent(mContext, Register.class));
@@ -152,6 +144,24 @@ public class Login extends AppCompatActivity {
 
                 );
 
+    }
+
+    boolean isInputValid() {
+        return false;
+//        if (username.length() < 4)
+//        mUserName.addValidator(new Validator("Entered name too short ") {
+//            @Override
+//            public boolean isValid(EditText editText) {
+//                return ;
+//            }
+//        });
+//
+//        mPassword.addValidator(new Validator("Entered password too short ") {
+//            @Override
+//            public boolean isValid(EditText editText) {
+//                return password.length() >= 6;
+//            }
+//        });
     }
 
 

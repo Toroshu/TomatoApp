@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/welcomeText"
+            android:id="@+id/tv_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -29,22 +28,18 @@
             android:visibility="gone" />
 
 
-        <com.andreabaccega.widget.FormEditText
+        <EditText
             android:id="@+id/usernameField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="@drawable/custom_edittext"
             android:hint="Your name"
             android:maxLength="15"
             android:padding="10dp"
-            android:typeface="monospace"
-            materialdesign:emptyErrorString="Name field can\'t be empty"
-            materialdesign:testErrorString="Enter your full name"
-            materialdesign:testType="personFullName" />
+            android:typeface="monospace" />
 
 
-        <com.andreabaccega.widget.FormEditText
+        <EditText
 
             android:id="@+id/heroNumberField"
             android:layout_width="match_parent"
@@ -52,20 +47,17 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/custom_edittext"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
             android:maxLength="15"
 
             android:padding="10dp"
-            android:typeface="monospace"
-            materialdesign:emptyErrorString="Password can\'t be empty"
-            materialdesign:testErrorString="Enter your password" />
+            android:typeface="monospace" />
     </LinearLayout>
 
 
-    <com.gc.materialdesign.views.ButtonRectangle
+    <Button
         android:id="@+id/signButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +74,7 @@
         android:text="@string/txt_signin"
         android:textColor="#fff" />
 
-    <com.gc.materialdesign.views.ButtonRectangle
+    <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -100,12 +92,11 @@
         android:text="Create my account"
         android:textColor="#fff" />
 
-    <com.gc.materialdesign.views.ButtonFlat
+    <Button
         android:id="@+id/fypButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="recoverPassword"
         android:padding="10dp"
-
         android:text="@string/txt_fyp" />
 </LinearLayout>

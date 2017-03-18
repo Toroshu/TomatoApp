@@ -9,13 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.gc.materialdesign.views.ButtonRectangle;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
@@ -25,6 +23,8 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import toroshu.tomato.R;
 import toroshu.tomato.core.Phone;
 
@@ -43,19 +43,22 @@ public class Status extends AppCompatActivity {
     AccountHeader headerResult;
     Drawer result;
 
-    ButtonRectangle mturnoff;
-    int READ_SIM_SERIAL_NUMBER_PERMISSION;
+    @BindView(R.id.pinButton)
+    Button mturnoff;
+//    int READ_SIM_SERIAL_NUMBER_PERMISSION;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status);
 
-        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        ButterKnife.bind(this);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+//
+//        AdView mAdView = (AdView) findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -64,7 +67,7 @@ public class Status extends AppCompatActivity {
         mContext = getApplicationContext();
         myPhone = new Phone(mContext);
 
-        mturnoff = (ButtonRectangle) findViewById(R.id.pinButton);
+//        mturnoff = (ButtonRectangle) findViewById(R.id.pinButton);
         mturnoff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

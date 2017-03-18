@@ -6,7 +6,7 @@
 
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/iv_logo"
         android:layout_width="200dp"
         android:layout_height="199dp"
         android:layout_centerHorizontal="true"
@@ -17,20 +17,19 @@
 
 
     <ImageView
-        android:id="@+id/mid"
+        android:id="@+id/iv_mid"
         android:layout_width="150dp"
         android:layout_height="15dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="15dp"
         android:gravity="center_horizontal"
-        android:onClick="gotomid"
         android:src="@drawable/mid" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
+        android:layout_below="@+id/iv_logo"
         android:layout_centerHorizontal="true"
         android:onClick="openFeatureX"
         android:text="Feature X"
