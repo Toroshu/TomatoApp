@@ -1,16 +1,18 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 repositories {
     jcenter()
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "toroshu.tomato"
-        minSdkVersion 14
-        targetSdkVersion 25
+        minSdkVersion 16
+        targetSdkVersion 27
         versionCode 11
         versionName "3.6.0"
     }
@@ -24,15 +26,17 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile 'com.github.afollestad.material-dialogs:core:0.8.5.3@aar'
-    compile('com.mikepenz:materialdrawer:3.0.7@aar') {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-implementationr:8.5.1'
+    implementation 'com.github.afollestad.material-dialogs:core:0.8.5.3@aar'
+    implementation('com.mikepenz:materialdrawer:3.0.7@aar') {
         transitive = true
     }
-    compile 'com.google.android.gms:play-services-location:10.2.0'
-    compile 'com.android.support:recyclerview-v7:25.1.1'
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'com.android.support:design:25.1.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

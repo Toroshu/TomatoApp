@@ -1,4 +1,4 @@
-package toroshu.tomato.ui;
+package toroshu.tomato.deprecated;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,7 +26,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import toroshu.tomato.R;
-import toroshu.tomato.core.Phone;
+import toroshu.tomato.utils.Phone;
 
 
 public class Status extends AppCompatActivity {

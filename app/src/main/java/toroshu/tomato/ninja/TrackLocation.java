@@ -15,7 +15,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 
-import toroshu.tomato.core.Phone;
+import toroshu.tomato.utils.Phone;
 
 /*
 tracks location on receiving a sms from the user to do so

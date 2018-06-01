@@ -6,97 +6,70 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ui.Login">
+    tools:context=".deprecated.Login">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
-
-        <TextView
+    <TextView
             android:id="@+id/tv_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
             android:gravity="center"
-            android:textColor="#000"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:visibility="gone" />
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="Welcome, Himanshu" />
 
 
         <EditText
-            android:id="@+id/usernameField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:hint="Your name"
-            android:maxLength="15"
-            android:padding="10dp"
-            android:typeface="monospace" />
-
-
-        <EditText
-
-            android:id="@+id/heroNumberField"
+            android:id="@+id/et_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:maxLength="15"
+            android:layout_marginTop="30dp"
+            android:hint="@string/your_name"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+
+
+        <EditText
+
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:maxLength="15"
-
-            android:padding="10dp"
-            android:typeface="monospace" />
-    </LinearLayout>
+            android:padding="10dp" />
 
 
     <Button
-        android:id="@+id/signButton"
+        android:id="@+id/btn_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:background="#6bd7a4"
-        android:paddingBottom="10dp"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:paddingTop="10dp"
-        android:text="@string/txt_signin"
-        android:textColor="#fff" />
+        android:text="@string/sign_in"
+        android:theme="@style/GreenButton" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/btn_create_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-
-        android:layout_marginTop="20dp"
-        android:background="#6bd7a4"
-        android:paddingBottom="10dp"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:paddingTop="10dp"
-        android:text="Create my account"
-        android:textColor="#fff" />
+        android:text="@string/create_my_account"
+        android:theme="@style/GreenButton" />
 
     <Button
-        android:id="@+id/fypButton"
+        android:id="@+id/btn_fyp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="recoverPassword"
-        android:padding="10dp"
-        android:text="@string/txt_fyp" />
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:text="@string/fyp" />
+
 </LinearLayout>

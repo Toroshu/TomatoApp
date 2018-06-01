@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
 
 
-    tools:context=".ui.Status">
+    tools:context=".deprecated.Status">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

@@ -85,7 +85,7 @@ ADDED from AndroidManifest.xml:25:9
 		ADDED from AndroidManifest.xml:27:13
 	android:name
 		ADDED from AndroidManifest.xml:26:13
-activity#toroshu.tomato.ui.Login
+activity#toroshu.tomato.deprecated.Login
 ADDED from AndroidManifest.xml:29:9
 	android:label
 		ADDED from AndroidManifest.xml:32:13
@@ -95,7 +95,7 @@ ADDED from AndroidManifest.xml:29:9
 		ADDED from AndroidManifest.xml:33:13
 	android:name
 		ADDED from AndroidManifest.xml:30:13
-activity#toroshu.tomato.ui.Register
+activity#toroshu.tomato.deprecated.Register
 ADDED from AndroidManifest.xml:34:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:37:13
@@ -103,7 +103,7 @@ ADDED from AndroidManifest.xml:34:9
 		ADDED from AndroidManifest.xml:36:13
 	android:name
 		ADDED from AndroidManifest.xml:35:13
-activity#toroshu.tomato.ui.Status
+activity#toroshu.tomato.deprecated.Status
 ADDED from AndroidManifest.xml:38:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:42:13
@@ -127,7 +127,7 @@ action#android.intent.action.QUICKBOOT_POWERON
 ADDED from AndroidManifest.xml:47:17
 	android:name
 		ADDED from AndroidManifest.xml:47:25
-activity#toroshu.tomato.ui.RecoverPassword
+activity#toroshu.tomato.deprecated.RecoverPassword
 ADDED from AndroidManifest.xml:51:9
 	android:label
 		ADDED from AndroidManifest.xml:53:13
@@ -157,7 +157,7 @@ action#android.provider.Telephony.SMS_RECEIVED
 ADDED from AndroidManifest.xml:65:17
 	android:name
 		ADDED from AndroidManifest.xml:65:25
-activity#toroshu.tomato.ui.About
+activity#toroshu.tomato.deprecated.About
 ADDED from AndroidManifest.xml:69:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:72:13
@@ -165,7 +165,7 @@ ADDED from AndroidManifest.xml:69:9
 		ADDED from AndroidManifest.xml:71:13
 	android:name
 		ADDED from AndroidManifest.xml:70:13
-activity#toroshu.tomato.ui.Splash
+activity#toroshu.tomato.deprecated.Splash
 ADDED from AndroidManifest.xml:73:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:76:13

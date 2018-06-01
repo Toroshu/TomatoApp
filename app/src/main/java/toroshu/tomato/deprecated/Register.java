@@ -1,4 +1,4 @@
-package toroshu.tomato.ui;
+package toroshu.tomato.deprecated;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,7 +15,8 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import toroshu.tomato.R;
-import toroshu.tomato.core.Phone;
+import toroshu.tomato.ui.TermsAndConditions;
+import toroshu.tomato.utils.Phone;
 
 /*
     Second screen for registration
@@ -126,14 +127,14 @@ public class Register extends AppCompatActivity {
     }
 
     public void showHNDetails(View v) {
-
-        new MaterialDialog.Builder(this)
-                .title("Whose phone numbers should I add ?")
-                .content("If your phone ever gets stolen, these two numbers will get the alerts " +
-                        " and the details of intruder\'s sim via SMS." +
-                        " Note: Enter the phone numbers of only those persons, you trust.")
-                .positiveText("Okay")
-                .show();
+//
+//        new MaterialDialog.Builder(this)
+//                .title("Whose phone numbers should I add ?")
+//                .content("If your phone ever gets stolen, these two numbers will get the alerts " +
+//                        " and the details of intruder\'s sim via SMS." +
+//                        " Note: Enter the phone numbers of only those persons, you trust.")
+//                .positiveText("Okay")
+//                .show();
 
     }
 

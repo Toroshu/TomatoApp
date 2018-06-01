@@ -17,8 +17,8 @@
     <string name="txt_create_Account">Create my account</string>
     <string name="txt_ur_name">Your Name</string>
     <string name="txt_pwd">Password\t</string>
-    <string name="txt_signin">SIGN IN</string>
-    <string name="txt_fyp">I FORGOT MY PASSWORD</string>
+    <string name="sign_in">Sign In</string>
+    <string name="fyp">I FORGOT MY PASSWORD</string>
     <string name="tnc_details">
         By clicking on \"Create My account\" you are accepting the following terms and conditions:\n\n\n
 1.	this software \"Tomato Safety\" comes with no warranty.\n\n
@@ -43,4 +43,9 @@
     <string name="ac">Create an account</string>
     <string name="title_activity_credits">CreditsActivity</string>
     <string name="title_activity_shake">Shake</string>
+    <string name="your_name">Your name</string>
+    <string name="create_my_account">Create my account</string>
+    <string name="password">Password</string>
+    <string name="warn_username_short">Looks like your name too short !</string>
+    <string name="warn_password_short">Choose a stronger password</string>
 </resources>

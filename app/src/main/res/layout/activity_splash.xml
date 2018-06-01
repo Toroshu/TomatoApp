@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Splash">
+    tools:context=".deprecated.Splash">
 
 
     <ImageView
@@ -11,7 +11,6 @@
         android:layout_height="199dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:onClick="navigate"
         android:scaleType="fitCenter"
         android:src="@drawable/logo" />
 

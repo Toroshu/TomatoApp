@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.telephony.SmsMessage;
 
 import toroshu.tomato.R;
-import toroshu.tomato.core.Phone;
+import toroshu.tomato.utils.Phone;
 
 /*
 starts a siren sound on receiving a sms

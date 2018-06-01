@@ -7,7 +7,7 @@ import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import toroshu.tomato.core.Phone;
+import toroshu.tomato.utils.Phone;
 
 
 public class BootReceiver extends BroadcastReceiver {

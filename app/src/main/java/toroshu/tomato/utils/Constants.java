@@ -1,4 +1,4 @@
-package toroshu.tomato.core;
+package toroshu.tomato.utils;
 
 public final class Constants {
 

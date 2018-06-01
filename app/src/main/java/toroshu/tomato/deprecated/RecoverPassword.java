@@ -1,4 +1,4 @@
-package toroshu.tomato.ui;
+package toroshu.tomato.deprecated;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import toroshu.tomato.R;
-import toroshu.tomato.core.Phone;
+import toroshu.tomato.utils.Phone;
 
 /*
     Displays a recover password screen
@@ -19,7 +19,7 @@ import toroshu.tomato.core.Phone;
 
 public class RecoverPassword extends Activity {
 
-    @BindView(R.id.heroNumberField)
+    @BindView(R.id.et_hero_number)
     EditText heroField;
 
     Phone myPhone;

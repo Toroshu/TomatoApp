@@ -24,38 +24,22 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".ui.About"
+            android:name=".deprecated.About"
             android:label="@string/title_activity_about"
             android:theme="@style/BlackishTheme" />
         <activity
-            android:name=".ui.Credits"
+            android:name=".deprecated.Credits"
             android:label="@string/title_activity_credits"
             android:theme="@style/BlackishTheme" />
         <activity
-            android:name=".ui.Login"
-            android:icon="@drawable/logo"
-            android:label=" "
-            android:theme="@style/DialogTheme" />
-        <activity
-            android:name=".ui.RecoverPassword"
+            android:name=".deprecated.RecoverPassword"
             android:label="@string/title_activity_recover_password"
             android:theme="@style/DialogTheme" />
         <activity
-            android:name=".ui.Register"
+            android:name=".deprecated.Register"
             android:label="Just one more step" />
         <activity
-            android:name=".ui.Splash"
-            android:label="Tomato"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.Status"
+            android:name=".deprecated.Status"
             android:icon="@drawable/logo"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -79,13 +63,6 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-
-        <!-- Include the AdActivity configChanges and theme. -->
-        <!--<activity-->
-            <!--android:name="com.google.android.gms.ads.AdActivity"-->
-            <!--android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"-->
-            <!--android:theme="@android:style/Theme.Translucent" />-->
-
         <receiver
             android:name=".ninja.TrackLocation"
             android:enabled="true"
@@ -95,7 +72,11 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".ui.FeatureX"></activity>
+        <activity android:name=".deprecated.FeatureX" />
+        <activity android:name=".ui.Login" />
+        <activity android:name=".ui.Splash" />
+        <activity android:name=".utils.BaseActivity" />
+        <activity android:name=".ui.Onboard"></activity>
     </application>
 
 </manifest>

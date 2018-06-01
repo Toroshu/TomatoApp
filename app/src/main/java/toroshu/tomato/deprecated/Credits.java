@@ -1,4 +1,4 @@
-package toroshu.tomato.ui;
+package toroshu.tomato.deprecated;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

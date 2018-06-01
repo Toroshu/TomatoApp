@@ -2,6 +2,7 @@
     <color name="sbt_n">#DDDDDD</color>
     <color name="sbt_p">#379829</color>
 
+    <color name="colorAccent"> #6bd7a4</color>
 
     <color name="white">#ffffff</color>
     <color name="bg_gradient_start">#31244e</color>
@@ -13,7 +14,6 @@
 
     <color name="material_green_A200">#009688</color>
     <color name="ok">#48CFA9</color>
-
     <color name="monster_red">#c1272d</color>
 
 

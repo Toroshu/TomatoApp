@@ -1,4 +1,4 @@
-package toroshu.tomato.ui;
+package toroshu.tomato.deprecated;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.telephony.TelephonyManager;
 import android.view.View;
 
 import toroshu.tomato.R;
-import toroshu.tomato.core.Phone;
+import toroshu.tomato.utils.Phone;
 
 public class FeatureX extends AppCompatActivity {
     @Override

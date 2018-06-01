@@ -1,4 +1,4 @@
-package toroshu.tomato.core;
+package toroshu.tomato.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
