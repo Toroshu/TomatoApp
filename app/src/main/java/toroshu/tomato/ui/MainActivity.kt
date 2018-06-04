@@ -1,12 +1,13 @@
 package toroshu.tomato.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import toroshu.tomato.R
+import toroshu.tomato.utils.BaseActivity
 
-class Onboard : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_onboard)
+        setContentView(R.layout.activity_main)
     }
 }

@@ -25,6 +25,9 @@ class Login : BaseActivity() {
 
         if (alreadyRegistered) {
             btn_create_account.visibility = View.GONE
+        } else {
+            btn_fyp.visibility = View.GONE
+            btn_sign_in.visibility = View.GONE
         }
 
 
@@ -43,8 +46,8 @@ class Login : BaseActivity() {
 
     private fun createAccount() {
 
-        var userName = et_user.text.toString().trim()
-        var password = et_password.text.toString().trim()
+        val userName = et_user.text.toString().trim()
+        val password = et_password.text.toString().trim()
 
         if (Utils().isEmptyOrNull(userName)) {
             Utils().toast(this, R.string.warn_username_short)
@@ -59,7 +62,7 @@ class Login : BaseActivity() {
         getPrefs().setString(Constant.Username, userName)
         getPrefs().setString(Constant.Password, password)
 
-        startActivity(Intent(this, Onboard::class.java))
+        startActivity(Intent(this, OnBoard::class.java))
 
     }
 }

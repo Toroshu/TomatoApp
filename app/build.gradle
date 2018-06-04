@@ -27,10 +27,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-implementationr:8.5.1'
-    implementation 'com.github.afollestad.material-dialogs:core:0.8.5.3@aar'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
     implementation('com.mikepenz:materialdrawer:3.0.7@aar') {
         transitive = true
     }
@@ -38,5 +35,6 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

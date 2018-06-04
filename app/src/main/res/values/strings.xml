@@ -14,7 +14,7 @@
     <string name="txt_first_number">First number</string>
     <string name="txt_second_number">Second number</string>
     <string name="txt_t_n_c">I have read the terms and conditions.</string>
-    <string name="txt_create_Account">Create my account</string>
+    <string name="create_account">Create my account</string>
     <string name="txt_ur_name">Your Name</string>
     <string name="txt_pwd">Password\t</string>
     <string name="sign_in">Sign In</string>
@@ -48,4 +48,6 @@
     <string name="password">Password</string>
     <string name="warn_username_short">Looks like your name too short !</string>
     <string name="warn_password_short">Choose a stronger password</string>
+    <string name="invalid_number">Invalid phone number</string>
+    <string name="warn_same_number">\"You need to enter two different phone numbers\"</string>
 </resources>
