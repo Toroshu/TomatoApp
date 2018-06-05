@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_pin"
+            android:title="@string/siren_whistle_pin" />
+
+        <item
+            android:id="@+id/action_password"
+            android:title="@string/change_password" />
+
+        <item
+            android:id="@+id/action_new_sim"
+            android:title="@string/switching_to_a_new_sim" />
+
+
+        <item
+            android:id="@+id/action_faq"
+            android:title="@string/frequently_asked_questions" />
+
+
+        <item
+            android:id="@+id/action_credits"
+            android:title="@string/credits" />
+
+
+        <item
+            android:id="@+id/action_about"
+            android:title="@string/about_us" />
+    </group>
+</menu>

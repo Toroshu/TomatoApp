@@ -50,4 +50,11 @@
     <string name="warn_password_short">Choose a stronger password</string>
     <string name="invalid_number">Invalid phone number</string>
     <string name="warn_same_number">\"You need to enter two different phone numbers\"</string>
+    <string name="switch_off_the_security">Switch off the Security</string>
+    <string name="siren_whistle_pin">Siren Whistle PIN</string>
+    <string name="change_password">Change Password</string>
+    <string name="switching_to_a_new_sim">Switching to a new Sim ?</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="about_us">About Us</string>
+    <string name="credits">Credits</string>
 </resources>

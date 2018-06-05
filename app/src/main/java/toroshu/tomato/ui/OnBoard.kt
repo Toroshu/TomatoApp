@@ -74,7 +74,7 @@ class OnBoard : BaseActivity() {
         getPrefs().setBoolean(Constant.AlreadyRegistered, true)
 
 
-        startActivity(Intent(this, Status::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
 
     }
 }
