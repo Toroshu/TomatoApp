@@ -10,16 +10,16 @@ import toroshu.tomato.R
 class Splash : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.splash)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
 
-        iv_mid.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW)
-                    .setData(Uri.parse("http://www.madewithlove.org.in")))
-        }
-
-        iv_logo.setOnClickListener {
-            startActivity(Intent(this, Login::class.java))
-        }
+//        iv_mid.setOnClickListener {
+//            startActivity(Intent(Intent.ACTION_VIEW)
+//                    .setData(Uri.parse("http://www.madewithlove.org.in")))
+//        }
+//
+//        iv_logo.setOnClickListener {
+//            startActivity(Intent(this, Login::class.java))
+//        }
     }
 }

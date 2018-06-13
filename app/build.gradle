@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.jakewharton.hugo'
 
 repositories {
     jcenter()
@@ -26,15 +27,12 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
-    implementation('com.mikepenz:materialdrawer:3.0.7@aar') {
-        transitive = true
-    }
-    implementation 'com.google.android.gms:play-services-location:15.0.1'
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.afollestad.material-dialogs:core:0.9.6.0'
+    api 'com.google.android.gms:play-services-location:15.0.1'
+    api 'com.android.support:recyclerview-v7:27.1.1'
+    api 'com.android.support:appcompat-v7:27.1.1'
+    api 'com.android.support:design:27.1.1'
+    api 'com.android.support.constraint:constraint-layout:1.1.1'
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
