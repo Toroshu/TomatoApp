@@ -1,25 +1,19 @@
 package toroshu.tomato.ui
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_splash.*
-import toroshu.tomato.R
+import toroshu.tomato.utils.BaseActivity
+import toroshu.tomato.utils.Constant
 
-class Splash : AppCompatActivity() {
+class Splash : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.splash)
         super.onCreate(savedInstanceState)
 
-//        iv_mid.setOnClickListener {
-//            startActivity(Intent(Intent.ACTION_VIEW)
-//                    .setData(Uri.parse("http://www.madewithlove.org.in")))
-//        }
-//
-//        iv_logo.setOnClickListener {
-//            startActivity(Intent(this, Login::class.java))
-//        }
+        if (getPrefs().getBoolean(Constant.AlreadyRegistered))
+            startActivity(Intent(this, Login::class.java))
+        else
+            startActivity(Intent(this, OnBoard::class.java))
+
     }
 }
