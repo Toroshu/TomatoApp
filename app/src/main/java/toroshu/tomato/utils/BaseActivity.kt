@@ -1,9 +1,9 @@
 package toroshu.tomato.utils
 
-import android.app.Activity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 
-open class BaseActivity : Activity() {
+open class BaseActivity : AppCompatActivity() {
 
     lateinit var app: App
 

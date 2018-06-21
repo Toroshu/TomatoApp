@@ -10,10 +10,10 @@ class Splash : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (getPrefs().getBoolean(Constant.AlreadyRegistered))
-            startActivity(Intent(this, Login::class.java))
+        if (!getPrefs().getBoolean(Constant.AlreadyRegistered))
+            startActivity(Intent(this, Pitch::class.java))
         else
-            startActivity(Intent(this, OnBoard::class.java))
+            startActivity(Intent(this, Login::class.java))
 
     }
 }

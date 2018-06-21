@@ -18,6 +18,7 @@ class Constant {
         val Track = "Track"
         val PLAY_SERVICES_RESOLUTION_REQUEST = 9000
         val SavedSims = "SavedSims"
+        val Res = "res"
 
     }
 }
