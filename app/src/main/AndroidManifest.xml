@@ -83,7 +83,8 @@
         <activity android:name=".utils.BaseActivity" />
         <activity android:name=".ui.OnBoard" />
         <activity android:name=".ui.MainActivity" />
-        <activity android:name=".ui.Pitch"></activity>
+        <activity android:name=".ui.Pitch" />
+        <activity android:name=".ui.CreateAccount" />
     </application>
 
 </manifest>

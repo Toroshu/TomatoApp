@@ -1,9 +1,9 @@
 <resources>
     <color name="sbt_n">#DDDDDD</color>
     <color name="sbt_p">#379829</color>
-    <color name="colorPrimary">#2196F3</color>
-    <color name="colorPrimaryDark">#2196F3</color>
-    <color name="colorAccent"> #6bd7a4</color>
+    <color name="colorPrimary">#fbd389</color>
+    <color name="colorPrimaryDark">#eead7d</color>
+    <color name="colorAccent">#f48d77</color>
 
     <color name="white">#ffffff</color>
     <color name="ok">#48CFA9</color>

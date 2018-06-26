@@ -1,13 +1,8 @@
 package toroshu.tomato.ui
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import kotlinx.android.synthetic.main.activity_login.*
 import toroshu.tomato.R
 import toroshu.tomato.utils.BaseActivity
-import toroshu.tomato.utils.Constant
-import toroshu.tomato.utils.Utils
 
 class Login : BaseActivity() {
 
@@ -46,23 +41,23 @@ class Login : BaseActivity() {
 
     private fun createAccount() {
 
-        val userName = et_user.text.toString().trim()
-        val password = et_password.text.toString().trim()
-
-        if (Utils().isEmptyOrNull(userName)) {
-            Utils().toast(this, R.string.warn_username_short)
-            return
-        }
-
-        if (Utils().isEmptyOrNull(password)) {
-            Utils().toast(this, R.string.warn_password_short)
-            return
-        }
-
-        getPrefs().setString(Constant.Username, userName)
-        getPrefs().setString(Constant.Password, password)
-
-        startActivity(Intent(this, OnBoard::class.java))
+//        val userName = et_user.text.toString().trim()
+//        val password = et_password.text.toString().trim()
+//
+//        if (Utils().isEmptyOrNull(userName)) {
+//            Utils().toast(this, R.string.warn_username_short)
+//            return
+//        }
+//
+//        if (Utils().isEmptyOrNull(password)) {
+//            Utils().toast(this, R.string.warn_password_short)
+//            return
+//        }
+//
+//        getPrefs().setString(Constant.Username, userName)
+//        getPrefs().setString(Constant.Password, password)
+//
+//        startActivity(Intent(this, OnBoard::class.java))
 
     }
 }

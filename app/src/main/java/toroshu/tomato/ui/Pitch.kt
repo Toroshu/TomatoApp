@@ -25,7 +25,7 @@ class Pitch : BaseActivity() {
         indicator.setViewPager(vp_pitch)
 
         btn_get_started.setOnClickListener {
-            startActivity(Intent(this, OnBoard::class.java))
+            startActivity(Intent(this, CreateAccount::class.java))
         }
     }
 }
