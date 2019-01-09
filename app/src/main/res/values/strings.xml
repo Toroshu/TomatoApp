@@ -60,4 +60,5 @@
     <string name="let_s_proceed">Let\'s proceed</string>
     <string name="get_started">Get started</string>
     <string name="hero_number">Hero Number</string>
+    <string name="app_error">Something didn\'t work right</string>
 </resources>

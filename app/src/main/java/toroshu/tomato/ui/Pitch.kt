@@ -2,7 +2,9 @@ package toroshu.tomato.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract
 import kotlinx.android.synthetic.main.activity_pitch.*
+import timber.log.Timber
 import toroshu.tomato.R
 import toroshu.tomato.adapter.PitchAdapter
 import toroshu.tomato.utils.BaseActivity
@@ -28,4 +30,7 @@ class Pitch : BaseActivity() {
             startActivity(Intent(this, CreateAccount::class.java))
         }
     }
+
+
+
 }

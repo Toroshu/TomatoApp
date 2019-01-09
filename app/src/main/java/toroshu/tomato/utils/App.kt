@@ -1,6 +1,7 @@
 package toroshu.tomato.utils
 
 import android.app.Application
+import timber.log.Timber
 
 class App : Application() {
 
@@ -10,6 +11,8 @@ class App : Application() {
         super.onCreate()
 
         prefs = Prefs(this)
+
+        Timber.plant(Timber.DebugTree())
 
     }
 
