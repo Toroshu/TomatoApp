@@ -42,5 +42,6 @@ class Prefs(context: Context) {
         return sharedPrefs.getInt(key, default)
     }
 
+    fun doesUserExist(): Boolean = getString(Constant.Username).isNotEmpty()
 
 }

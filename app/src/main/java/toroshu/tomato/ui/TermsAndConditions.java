@@ -2,7 +2,6 @@ package toroshu.tomato.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import toroshu.tomato.R;
 

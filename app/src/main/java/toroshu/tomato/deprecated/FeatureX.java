@@ -2,10 +2,10 @@ package toroshu.tomato.deprecated;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
 import toroshu.tomato.R;
 import toroshu.tomato.utils.Phone;
 

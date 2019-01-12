@@ -1,79 +1,66 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <!--android:layout_centerInParent="true"-->
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:elevation="10dp"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:orientation="vertical">
 
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/til_name"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/your_name"
-                android:inputType="textPersonName"
-                android:maxLines="1" />
-
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:text="@string/what_s_your_name" />
 
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/til_password"
+        <EditText
+            android:id="@+id/et_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:maxLines="1" />
-
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
 
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/til_hero1"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/password" />
 
-            <EditText
-                android:id="@+id/et_hero"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:hint="@string/hero_number"
-                android:inputType="phone" />
 
-        </android.support.design.widget.TextInputLayout>
-
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1" />
 
     </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:background="@color/colorAccent"
         android:src="@drawable/ic_arrow_forward"
         app:fabSize="normal" />
 
+    </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

@@ -2,30 +2,45 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/action_pin"
-            android:title="@string/siren_whistle_pin" />
+            android:id="@+id/action_status"
+            android:icon="@drawable/ic_status"
+            android:title="Status" />
 
         <item
-            android:id="@+id/action_password"
-            android:title="@string/change_password" />
-
-        <item
-            android:id="@+id/action_new_sim"
-            android:title="@string/switching_to_a_new_sim" />
+            android:id="@+id/action_manage_hero"
+            android:icon="@drawable/ic_hero"
+            android:title="Hero" />
 
 
         <item
-            android:id="@+id/action_faq"
-            android:title="@string/frequently_asked_questions" />
+            android:id="@+id/action_help"
+            android:icon="@drawable/ic_help"
+            android:title="Help" />
+        <!--<item-->
+        <!--android:id="@+id/action_pin"-->
+        <!--android:title="@string/siren_whistle_pin" />-->
+
+        <!--<item-->
+        <!--android:id="@+id/action_password"-->
+        <!--android:title="@string/change_password" />-->
+
+        <!--<item-->
+        <!--android:id="@+id/action_new_sim"-->
+        <!--android:title="@string/switching_to_a_new_sim" />-->
 
 
-        <item
-            android:id="@+id/action_credits"
-            android:title="@string/credits" />
+        <!--<item-->
+        <!--android:id="@+id/action_faq"-->
+        <!--android:title="@string/frequently_asked_questions" />-->
 
 
-        <item
-            android:id="@+id/action_about"
-            android:title="@string/about_us" />
+        <!--<item-->
+        <!--android:id="@+id/action_credits"-->
+        <!--android:title="@string/credits" />-->
+
+
+        <!--<item-->
+        <!--android:id="@+id/action_about"-->
+        <!--android:title="@string/about_us" />-->
     </group>
 </menu>

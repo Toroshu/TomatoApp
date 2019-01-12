@@ -45,7 +45,6 @@
     <string name="title_activity_shake">Shake</string>
     <string name="your_name">Your name</string>
     <string name="create_my_account">Create my account</string>
-    <string name="password">Password</string>
     <string name="warn_username_short">Looks like your name too short !</string>
     <string name="warn_password_short">Choose a stronger password</string>
     <string name="invalid_number">Invalid phone number</string>
@@ -61,4 +60,11 @@
     <string name="get_started">Get started</string>
     <string name="hero_number">Hero Number</string>
     <string name="app_error">Something didn\'t work right</string>
+    <string name="what_s_your_name">What\'s your name ?</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="wrong_password">Password you entered is wrong</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

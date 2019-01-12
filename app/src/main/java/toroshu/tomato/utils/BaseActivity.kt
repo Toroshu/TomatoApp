@@ -1,7 +1,7 @@
 package toroshu.tomato.utils
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -15,4 +15,6 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     fun getPrefs(): Prefs = app.prefs
+
+    fun getDb(): AppDatabase = app.db
 }
