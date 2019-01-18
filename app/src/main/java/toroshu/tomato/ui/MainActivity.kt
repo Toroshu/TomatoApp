@@ -2,7 +2,6 @@ package toroshu.tomato.ui
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.ContactsContract
@@ -12,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 import timber.log.Timber
 import toroshu.tomato.R
+import toroshu.tomato.fragment.HeroFragment
+import toroshu.tomato.fragment.StatusFragment
 import toroshu.tomato.utils.BaseActivity
 import toroshu.tomato.utils.Constant
 import toroshu.tomato.utils.Utils
@@ -35,9 +36,14 @@ class MainActivity : BaseActivity() {
         navigation_view.setOnNavigationItemSelectedListener { item ->
             run {
                 toolbar.title = item.title
-//                when (item.itemId) {
-//                    R.id.action_help -> toolbar.title = item.title
-//                }
+                val fragment = when (item.itemId) {
+                    R.id.action_manage_hero -> HeroFragment()
+                    R.id.action_status -> StatusFragment()
+                    R.id.action_help -> HeroFragment()
+                    else -> HeroFragment()
+                }
+                supportFragmentManager.beginTransaction().replace(R.id.fl_container,
+                        fragment).commit()
                 return@setOnNavigationItemSelectedListener true
             }
         }

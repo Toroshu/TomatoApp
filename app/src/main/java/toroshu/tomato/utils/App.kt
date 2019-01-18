@@ -17,7 +17,7 @@ class App : Application() {
         db = Room.databaseBuilder(
                 this,
                 AppDatabase::class.java,
-                "tomato").build()
+                "tomato").allowMainThreadQueries().build()
 
 
         Timber.plant(Timber.DebugTree())
