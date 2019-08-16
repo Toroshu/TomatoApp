@@ -2,20 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/action_status"
-            android:icon="@drawable/ic_status"
-            android:title="Status" />
+            android:id="@+id/action_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
 
         <item
             android:id="@+id/action_manage_hero"
             android:icon="@drawable/ic_hero"
-            android:title="Hero" />
+            android:title="@string/hero" />
 
 
         <item
             android:id="@+id/action_help"
             android:icon="@drawable/ic_help"
-            android:title="Help" />
+            android:title="@string/help" />
         <!--<item-->
         <!--android:id="@+id/action_pin"-->
         <!--android:title="@string/siren_whistle_pin" />-->

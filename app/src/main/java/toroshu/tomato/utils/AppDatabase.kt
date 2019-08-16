@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import toroshu.tomato.dao.HeroDao
 import toroshu.tomato.models.Hero
 
-@Database(entities = arrayOf(Hero::class), version = 1)
-abstract public class AppDatabase : RoomDatabase() {
+@Database(entities = [Hero::class], version = 2)
+public abstract class AppDatabase : RoomDatabase() {
     abstract fun heroDao(): HeroDao
 }

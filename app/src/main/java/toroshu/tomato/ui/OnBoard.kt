@@ -4,11 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import com.afollestad.materialdialogs.MaterialDialog
 import kotlinx.android.synthetic.main.activity_onboard.*
+import org.jetbrains.anko.toast
 import toroshu.tomato.R
-import toroshu.tomato.deprecated.Status
 import toroshu.tomato.utils.BaseActivity
 import toroshu.tomato.utils.Constant
-import toroshu.tomato.utils.Utils
 
 class OnBoard : BaseActivity() {
 
@@ -37,20 +36,20 @@ class OnBoard : BaseActivity() {
         }
 
         tv_tnc.setOnClickListener {
-            MaterialDialog.Builder(this@OnBoard)
-                    .title("Whose phone numbers should I add ?")
-                    .content(R.string.tnc_details)
-                    .positiveText("Okay")
+            MaterialDialog(this@OnBoard)
+                    .title(text = "Whose phone numbers should I add ?")
+                    .message(R.string.tnc_details)
+                    .positiveButton(R.string.okay)
                     .show()
         }
 
         btn_help.setOnClickListener {
-            MaterialDialog.Builder(this@OnBoard)
-                    .title("Whose phone numbers should I add ?")
-                    .content("If your phone ever gets stolen, these two numbers will get the alerts " +
+            MaterialDialog(this@OnBoard)
+                    .title(text = "Whose phone numbers should I add ?")
+                    .message(text = "If your phone ever gets stolen, these two numbers will get the alerts " +
                             " and the details of intruder\'s sim via SMS." +
                             " Note: Enter the phone numbers of only those persons, you trust.")
-                    .positiveText("Okay")
+                    .positiveButton(R.string.okay)
                     .show()
         }
     }
@@ -62,12 +61,12 @@ class OnBoard : BaseActivity() {
 
 
         if (firstHero.length != 10 || secondHero.length != 10) {
-            Utils().toast(this, R.string.invalid_number)
+            toast(R.string.invalid_number)
             return
         }
 
         if (firstHero.equals(secondHero))
-            Utils().toast(this, R.string.warn_same_number)
+            toast(R.string.warn_same_number)
 
         getPrefs().setString(Constant.FirstSuperHero, firstHero)
         getPrefs().setString(Constant.SecondSuperHero, secondHero)

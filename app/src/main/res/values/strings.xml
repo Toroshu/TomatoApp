@@ -44,7 +44,7 @@
     <string name="title_activity_credits">CreditsActivity</string>
     <string name="title_activity_shake">Shake</string>
     <string name="your_name">Your name</string>
-    <string name="create_my_account">Create my account</string>
+    <!--<string name="create_my_account">Create my account</string>-->
     <string name="warn_username_short">Looks like your name too short !</string>
     <string name="warn_password_short">Choose a stronger password</string>
     <string name="invalid_number">Invalid phone number</string>
@@ -67,4 +67,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="hero">Hero</string>
+    <string name="help">Help</string>
+    <string name="save">Save</string>
+    <string name="phone_too_short">Phone number should have 10 digits</string>
+    <string name="invalid_phone">Invalid phone number</string>
+    <string name="name_too_short">Your name seems to be too short</string>
+    <string name="new_password_too_short">Length of password should be atleast 5</string>
+    <string name="this_is_a_dummy">This is a dummy</string>
+    <string name="create_my_account">Create my account</string>
+    <string name="okay">Okay</string>
 </resources>

@@ -24,7 +24,7 @@ public class FeatureX extends AppCompatActivity {
 
         boolean protectionOn = myPhone.isProtectionOn();
         String newSimID = tm.getSimSerialNumber();
-        String oldSimID = myPhone.getSIMId();
+        String oldSimID = myPhone.getSimId();
 
         if (protectionOn && newSimID.length() != 0 && !newSimID.equals(oldSimID)) {
             // sim is changed

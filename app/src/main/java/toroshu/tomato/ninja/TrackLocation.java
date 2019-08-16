@@ -99,13 +99,13 @@ public class TrackLocation extends BroadcastReceiver
                 SmsManager manager = SmsManager.getDefault();
 
                 manager.sendTextMessage(
-                        myPhone.getFSH(),
+                        myPhone.getFsh(),
                         null,
                         msg,
                         null, null);
 
                 manager.sendTextMessage(
-                        myPhone.getSSH(),
+                        myPhone.getSsh(),
                         null,
                         msg,
                         null, null);

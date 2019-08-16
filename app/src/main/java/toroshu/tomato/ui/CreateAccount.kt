@@ -4,10 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_create_account.*
 import kotlinx.android.synthetic.main.toolbar.*
+import org.jetbrains.anko.toast
 import toroshu.tomato.R
 import toroshu.tomato.utils.BaseActivity
 import toroshu.tomato.utils.Constant
-import toroshu.tomato.utils.Utils
+import toroshu.tomato.utils.Validator
 
 class CreateAccount : BaseActivity() {
 
@@ -24,7 +25,7 @@ class CreateAccount : BaseActivity() {
         toolbar.title = "Let's get started"
         setSupportActionBar(toolbar)
 
-        fab_create_account.setOnClickListener {
+        btn_create_account.setOnClickListener {
             createAccount()
         }
 
@@ -35,14 +36,16 @@ class CreateAccount : BaseActivity() {
 
         val userName = et_name.text.toString().trim()
         val password = et_password.text.toString().trim()
+        val nameValidator = Validator.name(userName, this)
+        val passwordValidator = Validator.newPassword(userName, this)
 
-        if (Utils().isEmptyOrNull(userName)) {
-            Utils().toast(this, R.string.warn_username_short)
+        if (!nameValidator.isValid) {
+            toast(nameValidator.message)
             return
         }
 
-        if (Utils().isEmptyOrNull(password)) {
-            Utils().toast(this, R.string.warn_password_short)
+        if (!passwordValidator.isValid) {
+            toast(nameValidator.message)
             return
         }
 

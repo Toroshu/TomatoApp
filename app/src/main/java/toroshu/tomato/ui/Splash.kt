@@ -9,6 +9,12 @@ class Splash : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        if (true) {
+            startActivity(Intent(this, MainActivity::class.java))
+            return
+        }
+
+
         if (!getPrefs().doesUserExist())
             startActivity(Intent(this, Pitch::class.java))
         else

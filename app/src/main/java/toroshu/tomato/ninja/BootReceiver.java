@@ -52,7 +52,7 @@ public class BootReceiver extends BroadcastReceiver {
 
         boolean protectionOn = myPhone.isProtectionOn();
         String newSimID = tm.getSimSerialNumber();
-        String oldSimID = myPhone.getSIMId();
+        String oldSimID = myPhone.getSimId();
 
        /* if (protectionOn)
             toast("on");
@@ -72,12 +72,12 @@ public class BootReceiver extends BroadcastReceiver {
                         " It is being used by the sender of this message.";
 
                 manager.sendTextMessage(
-                        myPhone.getFSH(),
+                        myPhone.getFsh(),
                         null,
                         msg, null, null);
 
                 manager.sendTextMessage(
-                        myPhone.getSSH(),
+                        myPhone.getSsh(),
                         null,
                         msg,
                         null, null);

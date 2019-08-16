@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HeroFragment">
 
@@ -13,13 +14,25 @@
         android:layout_centerInParent="true"
         android:visibility="gone" />
 
+    <!--<TextView-->
+        <!--android:id="@+id/tv_debug"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/rv_hero"-->
+        <!--tools:text="Phone number" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_hero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="30dp"
+        android:layout_margin="16dp"
         android:src="@drawable/ic_help"
         app:fabSize="normal" />
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context=".fragment.AddHeroFragment">
+
+    <ImageView
+        android:id="@+id/iv_dismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_dismiss"
+        android:text="@string/this_is_a_dummy" />
+
+    <RelativeLayout
+        android:id="@+id/ll_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_info"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_contacts"
+            android:tint="@color/colorAccent" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/positiveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_phone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/save" />
+
+
+</RelativeLayout>

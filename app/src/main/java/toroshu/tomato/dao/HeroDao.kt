@@ -17,4 +17,8 @@ public interface HeroDao {
 
     @Query("SELECT * FROM hero")
     fun getAll(): List<Hero>
+
+    @Query("SELECT COUNT(*) FROM hero")
+    fun getCount(): Int
+
 }
